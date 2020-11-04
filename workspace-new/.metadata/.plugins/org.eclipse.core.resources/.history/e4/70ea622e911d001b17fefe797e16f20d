@@ -1,0 +1,12 @@
+package com.boot.controllers;
+
+import java.util.HashMap;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.boot.beans.Item;
+
+@RestController
+public class ItemController {
+	HashMap<Integer,Item>itemData=new HashMap<Integer,Item>();
+}

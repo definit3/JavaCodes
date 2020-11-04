@@ -1,0 +1,26 @@
+package com.boot.controllers;
+
+import java.util.HashMap;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.boot.beans.Item;
+
+@RestController
+public class ItemController {
+	HashMap<Integer,Item>itemData=new HashMap<Integer,Item>();
+	public ItemController()
+	{
+		itemData.put(101,new Item(101,"Camera",50000));
+		itemData.put(201,new Item(201,"2amera",10000));
+		itemData.put(301,new Item(301,"3amera",20000));
+	}
+	
+	@RequestMapping(value="item/{id}")
+	public Item getItem(@PathVariable("id") int id)
+	{
+		return itemData.get(id);
+	}
+}

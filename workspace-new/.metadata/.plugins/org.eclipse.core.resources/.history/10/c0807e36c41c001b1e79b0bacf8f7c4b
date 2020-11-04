@@ -1,0 +1,32 @@
+package service;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+
+public class CustomerService {
+	HashMap<Integer, Customer>custData=new HashMap<>();
+	public CustomerService()
+	{
+		custData.put(100, new Customer(100,"ABC Retail","Delhi"));
+		custData.put(200, new Customer(200,"BCD Retail","Delhi"));
+		custData.put(300, new Customer(300,"CDE Retail","Delhi"));
+		custData.put(400, new Customer(400,"DEF Retail","Delhi"));
+		custData.put(500, new Customer(500,"EFG Retail","Delhi"));
+		custData.put(600, new Customer(600,"FGH Retail","Delhi"));
+	}
+	
+	public Customer getCustomer(int cid)
+	{
+		Customer c=custData.get(cid);
+		return c;
+	}
+	
+	public ArrayList<Customer>getAll()
+	{
+		Collection<Customer> col=custData.values();
+		ArrayList<Customer> list= new ArrayList<>();
+		list.addAll(col);
+		return list;
+	}
+}

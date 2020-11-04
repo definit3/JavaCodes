@@ -1,0 +1,39 @@
+package com.boot.controllers;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.boot.Vendor;
+
+@RestController
+public class VendorController {
+		HashMap<Integer,Vendor>vendorData= new HashMap<>();
+		
+		public VendorController()
+		{
+			vendorData.put(1,new Vendor("1","vendor1","address1"));
+			vendorData.put(2,new Vendor("2","vendor2","address2"));
+			vendorData.put(3,new Vendor("3","vendor3","address3"));
+		}
+		
+		@RequestMapping(value="vendor/{vid}")
+		public Vendor getVendor(@PathVariable("vid")int id)
+		{
+			return vendorData.get(id);
+		}
+		
+		@RequestMapping(value="vendors")
+		public List<Vendor>getAllVendors()
+		{
+			Collection<Vendor>c=vendorData.values();
+			List<Vendor> list=new ArrayList<>();
+			list.addAll(c);
+			return list;
+		}
+}

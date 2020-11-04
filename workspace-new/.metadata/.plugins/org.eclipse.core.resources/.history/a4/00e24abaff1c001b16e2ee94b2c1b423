@@ -1,0 +1,5 @@
+package com.hsc.controllers.employee;
+
+public class EmployeeController {
+
+}

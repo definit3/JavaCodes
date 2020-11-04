@@ -1,0 +1,8 @@
+package com.boot.beans;
+
+public class Item {
+	private int itemCode;
+	private String itemName;
+	private float price;
+	private int vendorCode;
+}

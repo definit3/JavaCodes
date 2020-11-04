@@ -1,0 +1,15 @@
+package service;
+
+import java.util.HashMap;
+
+public class CustomerService {
+	HashMap<Integer, Customer>custData=new HashMap<>();
+	public CustomerService()
+	{
+		custData.put(100, new Customer(100,"ABC Retail","Delhi"));
+		custData.put(100, new Customer(200,"BCD Retail","Delhi"));
+		custData.put(100, new Customer(300,"CDE Retail","Delhi"));
+		custData.put(100, new Customer(400,"DEF Retail","Delhi"));
+		custData.put(100, new Customer(500,"EFG Retail","Delhi"));
+	}
+}

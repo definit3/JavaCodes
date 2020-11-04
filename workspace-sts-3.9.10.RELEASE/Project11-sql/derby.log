@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Oct 28 16:01:45 IST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance a816c00e-0175-6ec3-75d6-000006f834c0 
+on database directory /home/definite/Downloads/trgdb/empdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@7e0babb1 
+Loaded from file:/opt/Apache/db-derby-10.15.1.3-bin/lib/derby.jar
+java.vendor=Ubuntu
+java.runtime.version=11.0.7+10-post-Ubuntu-2ubuntu219.10
+user.dir=/home/definite/Documents/workspace-sts-3.9.10.RELEASE/Project11-sql
+os.name=Linux
+os.arch=amd64
+os.version=5.3.0-64-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

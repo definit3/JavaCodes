@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ItemList.java&apos; to &apos;vendorapp/src/main/java/com.boot&apos;&#x0A;- Original project: &apos;itemapp&apos;&#x0A;- Destination element: &apos;vendorapp/src/main/java/com.boot&apos;&#x0A;- Original element: &apos;com.boot.beans.ItemList.java&apos;" description="Copy compilation unit" destination="=vendorapp/src\/main\/java&lt;com.boot" element1="/src\/main\/java&lt;com.boot.beans{ItemList.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1604386472564" units="1" version="1.0"/>
+</session>

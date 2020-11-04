@@ -1,0 +1,56 @@
+package com.boot.controllers;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.boot.beans.Item;
+import com.boot.beans.ItemList;
+
+@RestController
+public class ItemController {
+	HashMap<Integer,Item>itemData=new HashMap<Integer,Item>();
+	public ItemController()
+	{
+		itemData.put(101,new Item(101,"Camera",50000));
+		itemData.put(201,new Item(201,"2amera",10000));
+		itemData.put(301,new Item(301,"3amera",20000));
+	}
+	
+	@RequestMapping(value="items/{id}")
+	public Item getItem(@PathVariable("id") int id)
+	{
+		return itemData.get(id);
+	}
+	
+	@RequestMapping(value="items")
+	public List<Item>getAllItems()
+	{
+		Collection<Item> c=itemData.values();
+		List<Item>list=new ArrayList();
+		list.addAll(c);
+		return list;
+	}
+	
+	@RequestMapping(value="items/vendor/{vc}")
+	public ItemList getItemsofVendor(@PathVariable("vc") int vendorCode)
+	{
+		List<Item>list=new ArrayList<Item>();
+		List<Item>all = getAllItems();
+		for(Item i :all)
+		{
+			int vc=i.getItemCode()/100;
+			if(vc==vendorCode)
+			{
+				list.add(i);
+			}
+		}
+		ItemList ilist= new ItemList(list);
+		return ilist;
+	}
+}

@@ -1,0 +1,36 @@
+package com.boot;
+
+public class Item {
+	private int itemCode;
+	private int itemName;
+	private float price;
+	public Item(int itemCode, int itemName, float price) {
+		super();
+		this.itemCode = itemCode;
+		this.itemName = itemName;
+		this.price = price;
+	}
+	@Override
+	public String toString() {
+		return "Item [itemCode=" + itemCode + ", itemName=" + itemName + ", price=" + price + "]";
+	}
+	public int getItemCode() {
+		return itemCode;
+	}
+	public void setItemCode(int itemCode) {
+		this.itemCode = itemCode;
+	}
+	public int getItemName() {
+		return itemName;
+	}
+	public void setItemName(int itemName) {
+		this.itemName = itemName;
+	}
+	public float getPrice() {
+		return price;
+	}
+	public void setPrice(float price) {
+		this.price = price;
+	}
+
+}

@@ -1,0 +1,8 @@
+package com.boot;
+
+public class Item {
+	private int itemCode;
+	private int itemName;
+	private float price;
+
+}

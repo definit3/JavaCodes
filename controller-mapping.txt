@@ -1,0 +1,7 @@
+if found customer object return type should be Customer
+if not found    string object   return type should be String
+
+
+
+@RequestMapping("customers/{a}/{b}")
+getAll(@PathVariable("a")int eid, @PathVariable("b")

@@ -1,0 +1,8 @@
+package service;
+
+import java.util.HashMap;
+
+public class CustomerService {
+	HashMap<Integer, Customer>custData=new HashMap<>();
+	
+}

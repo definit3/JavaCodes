@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script>
+function check()
+{
+	var val1=document.getElementById('fld1').value;
+	var val2=document.getElementById('fld2').value;
+	if(val1.length<8)
+	{
+		alert("empID is less than 8");
+	}
+	else if(val2.length<8)
+	{
+		alert("Password is less than 8");
+	}
+	else
+	{
+		document.getElementById('empid').innerHTML="Entered ID: "+val1;
+		document.getElementById('pass').innerHTML="Entered Pass: " +val2;
+	}
+}
+</script>
+
+
+
+Employee ID: 
+<input type='text' id='fld1'><br>
+Password: 
+<input type='text' id='fld2'><br>
+<button onclick='check()'>Login</button>
+<div id='empid'></div>
+<div id='pass'></div>
+</body>
+</html>

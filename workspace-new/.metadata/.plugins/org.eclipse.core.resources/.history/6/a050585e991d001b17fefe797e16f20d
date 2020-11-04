@@ -1,0 +1,19 @@
+package com.boot.controllers;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.boot.Vendor;
+
+@RestController
+public class VendorController {
+		HashMap<Integer,Vendor>vendorData= new HashMap<>();
+		
+		public VendorController()
+		{
+			vendorData.put(1,new Vendor("1","vendor1","address1"));
+		}
+}

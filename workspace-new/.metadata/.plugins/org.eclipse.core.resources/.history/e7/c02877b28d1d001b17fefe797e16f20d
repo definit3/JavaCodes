@@ -1,0 +1,10 @@
+package com.boot;
+
+import java.util.List;
+
+public class Vendor {
+	private String vendorCode;
+	private String vendorName;
+	private String address;
+	private List<Item>items;
+}
